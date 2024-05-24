@@ -61,17 +61,18 @@ function searchTasks() {
         }
     }
 }
-function sedates() {
-    const dateInput = document.getElementById('ddd').value;
-    const tasks = document.getElementById('taskList').getElementsByTagName('li');
-
-    for (const task of tasks) {
-        const dateText = task.getElementsByTagName('p')[0].textContent;
-        if (dateText === dateInput) {
-            task.style.display = '';
-        } else {
-            task.style.display = 'none';
-        }
+function seadata(){
+    const sin=document.getElementById("ddd").value;
+    const din=document.getElementById("taskList").getElementsByTagName("li");
+    for( const gro of din ){
+       const  taskName=gro.getElementsByTagName("p")[0].textContent;
+       if(taskName===sin){
+        gro.style.display = '';
+        sin.value='';
+       }
+       else{
+        gro.style.display = 'none';
+       }
     }
 }
 
